@@ -14,8 +14,12 @@ public class Calculator {
         return a * b;
     }
 
-    int div(int a, int b)
+    int div (int a, int b) throws IllegalArgumentException
     {
+        if (b == 0)
+        {
+            throw new IllegalArgumentException("dividing by zero");
+        }
         return a / b;
     }
 }
